@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.example.mapdemoapp.MySupportMapFragment"
+    tools:context=".MapsActivity"
+    android:id="@+id/map_layer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    android:layout_height="wrap_content" >
+
+    <include layout="@layout/map" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btnDrawPolygon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="140"
+            android:textSize="12dp"
+            android:textColor="#FFFFFF"
+            android:onClick="onClickButtonEvent"
+
+            />
+        <Button
+            android:id="@+id/btnZoomIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="12dp"
+            android:textColor="#FFFFFF"
+            android:onClick="onClickButtonEvent"
+
+            />
+        <Button
+            android:id="@+id/btnZoomOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="12dp"
+            android:textColor="#FFFFFF"
+            android:onClick="onClickButtonEvent"
+
+            />
+    </LinearLayout>
+
+</FrameLayout>

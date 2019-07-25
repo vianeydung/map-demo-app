@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.json.JSONException;
 
+import android.view.MotionEvent;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -57,5 +58,9 @@ public class BigClusteringMapActivity extends BaseMapActivity {
                 mClusterManager.addItem(offsetItem);
             }
         }
+    }
+    @Override
+    protected void onDragEvent(MotionEvent motionEvent) {
+
     }
 }
