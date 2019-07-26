@@ -30,7 +30,7 @@ public class MapsActivity extends BaseMapActivity {
     @Override
     protected void startMap() {
         LatLng sydney = new LatLng(51.503186, -0.126446);
-        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 10));
+        getMap().animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 10));
 
         mClusterManager = new ClusterManager<MyItem>(this, getMap());
 
